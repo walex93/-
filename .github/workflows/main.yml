@@ -32,6 +32,9 @@ jobs:
     - name: Add Android Platform
       run: cordova platform add android@13.0.0
 
+    - name: Remove legacy whitelist plugin
+      run: cordova plugin rm cordova-plugin-whitelist || true
+
     - name: Build APK
       run: cordova build android
 
