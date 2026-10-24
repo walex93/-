@@ -14,7 +14,6 @@
     <icon src="www/icons/icon-32.png" width="32" height="32" />
     <icon src="www/icons/icon-16.png" width="16" height="16" />
     <plugin name="cordova-plugin-inappbrowser" />
-    <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-splashscreen" />
     <plugin name="construct-plugin-file" />
     <preference name="orientation" value="portrait" />

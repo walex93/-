@@ -60,11 +60,6 @@
 			"variables": []
 		},
 		{
-			"id": "cordova-plugin-whitelist",
-			"version": null,
-			"variables": []
-		},
-		{
 			"id": "cordova-plugin-splashscreen",
 			"version": null,
 			"variables": []
