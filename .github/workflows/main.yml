@@ -21,7 +21,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '8'
+        java-version: '17'
 
     - name: Install Cordova CLI
       run: npm install -g cordova
@@ -30,7 +30,7 @@ jobs:
       run: npm install
 
     - name: Add Android Platform
-      run: cordova platform add android@9.1.0
+      run: cordova platform add android@11.0.0
 
     - name: Build APK
       run: cordova build android
