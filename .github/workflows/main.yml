@@ -1,0 +1,42 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '16'
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
+    - name: Install Cordova
+      run: npm install -g cordova@9.1.0
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Add Android Platform
+      run: cordova platform add android@9.1.0
+
+    - name: Build APK
+      run: cordova build android
+
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: game-apk
+        path: platforms/android/app/build/outputs/apk/debug/*.apk
