@@ -2,6 +2,6 @@
 	"name": "Fantasy Forest",
 	"private": true,
 	"dependencies": {
-		"cordova-android": "9.1.0"
+		"cordova-android": "11.0.0"
 	}
 }
